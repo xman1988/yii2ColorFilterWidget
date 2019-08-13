@@ -1,0 +1,160 @@
+/*General styles*/
+td {
+    display: flex;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+    outline: 3px solid #484848;
+}
+
+.boxes {
+    flex-direction: column;
+    padding: 50px;
+    background: #484848;
+    color: #ddd;
+    justify-content: space-between;
+}
+
+
+/*Checkboxes styles*/
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px 'Open Sans', Arial, sans-serif;
+    color: #ddd;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child {
+    margin-bottom: 0;
+}
+
+input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background: none;
+    width: 10px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*Checkboxes styles, стили цветных квадратов и галочек*/
+.greyLabel:before {
+    background: grey;
+}
+
+input[type="checkbox"]:checked + .greyLabel:before {
+    border: 4px solid grey;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.greenLabel:before {
+    background: green;
+}
+
+input[type="checkbox"]:checked + .greenLabel:before {
+    border: 4px solid green;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.redLabel:before {
+    background: red;
+}
+
+input[type="checkbox"]:checked + .redLabel:before {
+    border: 4px solid red;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.blueLabel:before {
+    background: blue;
+}
+
+input[type="checkbox"]:checked + .blueLabel:before {
+    border: 4px solid blue;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*Download button styles*/
+.ccd {
+    height: 95px;
+    width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+#download {
+    margin: 0 auto;
+    display: block;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 100px 0 #FFF, 1px 76px 10px #000;
+    color: #FFF;
+    background: #5D8EC7;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#download:hover {
+    text-shadow: 0 50px 0 #FFF, 1px 51px 20px #FFF;
+    margin-top: -50px;
+    height: 100px;
+    background: #222;
+}
+
+/*Others styles*/
+.text {
+    font: 20px 'Open Sans', Arial, sans-serif;
+}
+
+.warning {
+    color: #FF5900;
+}
